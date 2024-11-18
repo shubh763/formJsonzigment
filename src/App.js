@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import DynamicForm from './DynamicForm';
+import formSchema from './formSchema.json'; // Import your schema
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    const handleFormSubmit = (formData) => {
+        console.log('Form Data:', formData);
+    };
+
+    return (
+        <div className="container mt-5">
+            <DynamicForm schema={formSchema} onSubmit={handleFormSubmit} />
+        </div>
+    );
+};
 
 export default App;

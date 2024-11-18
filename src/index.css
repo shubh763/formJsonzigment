@@ -1,13 +1,34 @@
+/* Light Mode (default) */
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+  color: #333;
+  font-family: Arial, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.dynamic-form-container {
+  padding: 20px;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #fff;
+  color: #fff;
+}
+
+body.dark-mode .dynamic-form-container {
+  background-color: #444;
+}
+
+body.dark-mode .form-control {
+  background-color: #555;
+  color: white;
+}
+
+body.dark-mode button {
+  background-color: #666;
+  color: white;
+}
+
+body.dark-mode button.dark-mode-btn {
+  color: white;
 }
